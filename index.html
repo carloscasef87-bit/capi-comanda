@@ -10,7 +10,7 @@
 <link rel="icon" href="img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Bodoni+Moda:opsz,wght@6..96,500..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
 <style>
 :root{
@@ -20,7 +20,7 @@
   --serie-v:#E0612B; --serie-c:#1F6FA8;
   --sombra:0 1px 2px rgba(30,20,10,.06),0 6px 20px rgba(30,20,10,.06);
   --r:14px; --hh:112px;
-  --display:"Bodoni Moda",Georgia,serif; --texto:"Archivo",system-ui,-apple-system,sans-serif;
+  --display:"Archivo",system-ui,-apple-system,sans-serif; --texto:"Archivo",system-ui,-apple-system,sans-serif;
   color-scheme:light;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
@@ -44,7 +44,7 @@ a{color:var(--naranja-ink)}
 .num{font-variant-numeric:tabular-nums}
 .muted{color:var(--muted)} .ink2{color:var(--ink2)}
 .cap{font-family:var(--texto);font-stretch:85%;letter-spacing:.14em;text-transform:uppercase;font-size:11px;font-weight:700;color:var(--muted)}
-h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.08;margin:0;letter-spacing:-.01em}
+h1,h2,h3{font-family:var(--display);font-weight:800;font-stretch:90%;line-height:1.1;margin:0;letter-spacing:-.015em}
 
 /* ——— Encabezado ——— */
 header.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
@@ -86,7 +86,7 @@ main{max-width:1280px;margin:0 auto}
 /* ——— Inicio ——— */
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:28px 16px 8px}
 .hero h1{font-size:clamp(34px,5vw,56px)}
-.hero h1 em{font-style:italic;color:var(--naranja)}
+.hero h1 em{font-style:normal;color:var(--naranja)}
 .hero p.lead{font-size:17px;color:var(--ink2);max-width:560px}
 .hero-logo{background:#FDFCF8;border-radius:22px;padding:28px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;gap:10px}
 .hero-logo img{width:100%;max-width:380px}
@@ -331,7 +331,7 @@ details.tabla-graf summary{cursor:pointer;color:var(--ink2)}
 <header class="top" id="cab">
   <div class="top-1">
     <img src="img/logo.png" alt="Capitánia — Mariscos y Micheladas" class="logo" id="logoCab">
-    <div class="top-tit">Comanda · propuesta</div>
+    <div class="top-tit">Comanda · demo</div>
     <div class="esp"></div>
     <div class="seg" id="segSuc" role="group" aria-label="Sucursal">
       <button data-a="suc" data-v="vertiz" class="on">Vértiz</button>
@@ -346,7 +346,6 @@ details.tabla-graf summary{cursor:pointer;color:var(--ink2)}
     <button data-a="nav" data-v="entrada">🚪 Entrada</button>
     <button data-a="nav" data-v="duenos">📊 Dueños</button>
     <button data-a="nav" data-v="ojo">👁 Ojo CAPI</button>
-    <button data-a="nav" data-v="propuesta">📄 Propuesta</button>
   </nav>
 </header>
 
@@ -360,7 +359,6 @@ details.tabla-graf summary{cursor:pointer;color:var(--ink2)}
         <p class="lead">El mesero toma el pedido en su teléfono y en ese segundo aparece en la pantalla de la barra o de la cocina, con cronómetro. Cada artículo queda registrado con nombre y hora, la cuenta no se puede cobrar dos veces y ustedes ven las dos sucursales desde el celular.</p>
         <div class="bien">
           <button class="btn pri" data-a="nav" data-v="mesero">Probar como mesero →</button>
-          <button class="btn" data-a="nav" data-v="propuesta">Ver la propuesta</button>
         </div>
       </div>
       <div class="hero-logo">
@@ -540,114 +538,6 @@ details.tabla-graf summary{cursor:pointer;color:var(--ink2)}
     </div>
   </section>
 
-  <!-- PROPUESTA -->
-  <section class="vista" id="v-propuesta">
-    <div class="pad prop">
-      <div class="cap">Propuesta · 2 de octubre de 2026 · vigente al 1 de noviembre</div>
-      <h1 style="font-size:clamp(32px,5vw,48px);margin:10px 0 12px">Comanda CAPI</h1>
-      <p style="font-size:17px">En una frase: que el pedido salga del teléfono del mesero y llegue a la barra en un segundo; que nadie pueda agregar ni cobrar dos veces algo sin que quede registrado; y que ustedes vean las dos sucursales desde su celular.</p>
-
-      <h2>Lo que vi antes de escribirles</h2>
-      <ul>
-        <li>La sucursal Vértiz tiene <b>3.9 ★ con unas 100 reseñas</b> en Google. Las quejas casi nunca son de la comida ni del ambiente: son de <b>operación</b>. Hay 6 reseñas de lentitud (para entrar, para tomar la orden, por la bebida), 4 de presión para liberar la mesa, 3 de cobros que el cliente no reconoce o cobros dobles y 2 de propina «obligatoria».</li>
-        <li>Lo que más elogian sus clientes es el <b>ambiente</b>, la música, los icees, las tostadas y los precios. Eso no se toca.</li>
-        <li>La <b>ficha de Google de Campestre no está reclamada</b>: no tiene teléfono, horario ni fotos suyas. Y en Vértiz, desde hace unos 4 meses nadie contesta las reseñas.</li>
-        <li>Una reseña dice que <b>se va mucho la luz</b>. Por eso el sistema vive dentro del local y no depende del internet.</li>
-      </ul>
-
-      <h2>Cómo funciona</h2>
-      <div class="flujo">
-        <div class="nodo"><b>📱 Teléfonos de los meseros</b>Los suyos o unos Android sencillos. Toman el pedido y cobran.</div>
-        <div class="fl">→</div>
-        <div class="nodo centro"><b>🖥 Servidor CAPI en el local</b>Una computadora pequeña conectada a un no-break. Si se cae el internet, el local sigue trabajando igual. Si se va la luz, aguanta cerca de una hora.</div>
-        <div class="fl">→</div>
-        <div class="nodo"><b>🍹 Pantalla de barra · 🍤 pantalla de cocina · 🧾 impresora de tickets</b></div>
-      </div>
-      <p style="margin-top:12px">Cuando hay internet, el servidor manda copia a la nube y desde ahí <b>los dueños ven las dos sucursales en su celular</b>. Lo que pase sin internet se sube solo al volver.</p>
-
-      <h2>Por fases, para que paguen por lo que ya funciona</h2>
-      <div class="card fase">
-        <div class="fase-cab"><h3>Fase 1 · Comanda y barra, en Vértiz</h3><span class="precio">$45,000</span></div>
-        <p class="muted" style="margin:4px 0 8px">5 semanas, incluida una prueba de 2 semanas que empieza en los días flojos.</p>
-        <ul>
-          <li>Comanda en el teléfono del mesero, con mapa de mesas, menú, modificadores y notas.</li>
-          <li>Pantalla de barra y pantalla de cocina con cronómetro y semáforo.</li>
-          <li>Cancelaciones con clave del gerente y motivo, en una bitácora que nadie puede borrar.</li>
-          <li>Cobro con folio, en efectivo o con tarjeta (se anota la autorización de la terminal), y bloqueo para que la misma cuenta no se cobre dos veces.</li>
-          <li>Cuenta en el celular del cliente con QR, propina voluntaria, dividir cuenta y ticket por WhatsApp.</li>
-          <li>Corte de caja por turno y por mesero, para cuadrar la terminal contra el sistema.</li>
-          <li>Carga de su menú y sus precios, más capacitación a meseros, barra y gerente (2 sesiones).</li>
-        </ul>
-      </div>
-      <div class="card fase">
-        <div class="fase-cab"><h3>Fase 2 · Campestre, entrada y dueños</h3><span class="precio">$25,000</span></div>
-        <p class="muted" style="margin:4px 0 8px">3 semanas.</p>
-        <ul>
-          <li>Segunda sucursal, con su propio menú y precios si son distintos.</li>
-          <li>Lista de espera con aviso por WhatsApp. La cuenta de barra pasa a la mesa cuando se sientan.</li>
-          <li>Tablero de dueños: las dos sucursales en vivo, venta por hora, lo más vendido, meseros, cancelaciones y posibles cobros dobles.</li>
-        </ul>
-      </div>
-      <div class="card fase">
-        <div class="fase-cab"><h3>Fase 3 · Ojo CAPI, piloto en una sucursal</h3><span class="precio">desde $30,000</span></div>
-        <p class="muted" style="margin:4px 0 8px">4 semanas. El precio queda en firme después de ver sus cámaras y su grabador.</p>
-        <ul>
-          <li>Fila en la entrada, mesas ocupadas sin comanda, bebidas que salen de la barra contra las comandadas y coches en el carril del boulevard.</li>
-          <li>Avisos al teléfono de quien lo tiene que atender. Sin reconocimiento facial.</li>
-        </ul>
-      </div>
-      <div class="card fase">
-        <div class="fase-cab"><h3>Mensualidad</h3><span class="precio">$3,500 <small style="font-size:14px;font-family:var(--texto);font-weight:600">por sucursal</small></span></div>
-        <p style="margin:6px 0 0">Empieza el segundo mes de uso. Incluye la nube, respaldo diario, cambios al menú y precios, y soporte por WhatsApp en horario de servicio.</p>
-      </div>
-      <p><b>Fases 1 y 2 juntas: $65,000.</b> Cada fase se paga mitad al arrancar y mitad contra entrega.</p>
-
-      <h3 style="font-size:20px;margin-top:22px">Equipo</h3>
-      <p>Se compra a nombre de ustedes, a costo, sin comisión mía. Los precios son aproximados y se cotizan al momento:</p>
-      <ul>
-        <li>Servidor (mini PC): $7,000–9,000</li>
-        <li>No-break: $2,500–3,500</li>
-        <li>Pantalla de barra y de cocina (tablet de 10" o tele con mini PC): $3,500–5,000 cada una</li>
-        <li>Impresora térmica de red: $2,500–3,500</li>
-        <li>Teléfonos para meseros, si no usan los suyos: unos $2,500 cada uno</li>
-      </ul>
-
-      <h2>Lo que no incluye (para que no haya sorpresas)</h2>
-      <div class="no-inc">
-        <ul style="margin:0;padding-left:18px">
-          <li><b>Factura electrónica (CFDI) desde el sistema.</b> En las fases 1 y 2 se sigue facturando como hoy. Si la quieren dentro del sistema, se cotiza aparte.</li>
-          <li><b>Conexión directa con la terminal bancaria.</b> El mesero anota el número de autorización y el corte cuadra terminal contra sistema.</li>
-          <li><b>Inventario de cocina por receta.</b> Es una fase posterior. El conteo de botellas de barra sí se puede adelantar.</li>
-        </ul>
-      </div>
-
-      <h2>Lo que necesito de ustedes</h2>
-      <ul>
-        <li>Su menú con precios actuales, y si cambian por sucursal o por horario (por ejemplo, los litros a $79 de 12 a 8).</li>
-        <li>Cuántas mesas hay por zona en cada sucursal y cuántos meseros trabajan por turno.</li>
-        <li>Cómo levantan y cobran hoy: comanda de papel o sistema, qué terminal usan y quién hace el corte.</li>
-        <li>Para Ojo CAPI: la marca de su grabador y cuántas cámaras tienen.</li>
-      </ul>
-
-      <h2>Manejo de la información y confidencialidad</h2>
-      <ul>
-        <li><b>Acceso mínimo.</b> Nunca les voy a pedir contraseñas. Cualquier acceso es por invitación, con los permisos justos y se puede quitar cuando quieran.</li>
-        <li>No toco su terminal, sus cuentas de banco, sus redes ni su WhatsApp sin una autorización por escrito.</li>
-        <li><b>Confidencialidad sin fecha de término</b> sobre sus ventas, su personal y su operación. Firmo un convenio de confidencialidad si lo desean.</li>
-        <li>Información cifrada y respaldada diario. El video de las cámaras no sale del local.</li>
-        <li>Ustedes son los responsables de los datos y yo soy el encargado de manejarlos, conforme a la LFPDPPP. Los datos son suyos; si terminamos, se los entrego y borro mi copia.</li>
-      </ul>
-
-      <h2>Y un regalo, contraten o no</h2>
-      <p>Les ayudo a <b>reclamar y completar la ficha de Google de Campestre</b> (teléfono, horario, fotos, menú) y les dejo una guía corta para contestar reseñas. Es lo primero que ve quien busca «micheladas cerca de mí».</p>
-
-      <div class="card" style="padding:18px;margin-top:30px;display:flex;gap:16px;align-items:center;flex-wrap:wrap">
-        <div style="flex:1;min-width:220px"><b style="font-size:17px">Carlos Castañeda</b><div class="muted">León, Gto. · carloscasef87@gmail.com</div><div class="muted" style="font-size:13px;margin-top:4px">Le hago sistemas a la medida a empresas de León: imprenta de etiquetas, distribuidora de desechables y comercio.</div></div>
-        <button class="btn pri" data-a="nav" data-v="mesero">Probar la demo</button>
-      </div>
-      <p class="nota-demo">El menú, los precios, las mesas, los meseros y las cifras de esta demo son de ejemplo. <button class="btn chico" data-a="reiniciar">Reiniciar la demo</button></p>
-    </div>
-  </section>
 </main>
 </div>
 
@@ -1205,6 +1095,11 @@ function vistaCliente(){
 function medirCab(){const h=$('#cab');if(h)document.documentElement.style.setProperty('--hh',h.offsetHeight+'px')}
 if(!vistaCliente()){
   cargar();
+  const q=new URLSearchParams(location.search),vq=q.get('vista'),sq=q.get('suc');
+  if(sq&&SUC[sq])ui.suc=sq;
+  if(vq==='barra'||vq==='cocina'){ui.view='kds';ui.kds=vq}
+  else if(['inicio','mesero','kds','entrada','duenos','ojo'].includes(vq))ui.view=vq;
+  if(!document.getElementById('v-'+ui.view))ui.view='inicio';
   if(!MESEROS[ui.suc].includes(ui.mesero))ui.mesero=MESEROS[ui.suc][0];
   medirCab();addEventListener('resize',medirCab);
   render();
